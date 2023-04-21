@@ -1,30 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="gpt-app">
+    <div class="gradient_bg">
+      <Navbar />
+      <Header />
+    </div>
+    <Brand />
+    <WhatGpt3 />
+    <Feature />
+    <Possibility />
+    <Cta />
+    <Blog />
+    <Footer />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss"></style>
 
-nav {
-  padding: 30px;
+<script lang="ts">
+import * as Containers from "@/containers/index";
+import { Navbar, Cta, Brand } from "@/components/index";
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+export default {
+  components: {
+    ...Containers,
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+    Navbar,
+    Brand,
+    Cta,
+  },
+};
+</script>
